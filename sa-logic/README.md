@@ -10,4 +10,4 @@
 - Clone the repository using git clone command
 - Open folder in visual code
 - Run command "python -m pip install -r requirements.txt"
-- Run command "https://code.visualstudio.com/download"
+- Run command "python sentiment_analysis.py"
