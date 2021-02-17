@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 @RestController
 public class SentimentController {
 
-    @Value("http://localhost:5000/")
+    @Value("${sa.logic.api.url}")
     private String saLogicApiUrl;
 
     @PostMapping("/sentiment")
