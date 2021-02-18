@@ -51,3 +51,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 | ------ | ------ |
 | http://localhost:3000/testComms | Tests the communication between React and Python application |
 | http://localhost:3000/testHealth | Tests the communication between React and Springboot application |
+
+## Additonal Endpoints
+
+| Endpoint | Description |
+| ------ | ------ |
+| http://localhost:3000/weather | Sends the name of input city and displays the weather information |
