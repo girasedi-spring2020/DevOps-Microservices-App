@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  useLocation,
+  useLocation, Link
 } from "react-router-dom";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
@@ -13,6 +13,7 @@ import Paper from "material-ui/Paper";
 import Polarity from "./components/Polarity/Polarity";
 import TestJava from "./components/TestJava/TestJava";
 import TestPython from "./components/TestPython/TestPython";
+import Weather from "./components/Weather/Weather";
 import NotFound from "./components/NotFound/NotFound";
 
 const style = {
@@ -47,7 +48,6 @@ class App extends Component {
   };
 
   render() {
-    const currentURL = window.location.href;
     const polarityComponent =
       this.state.polarity !== undefined ? (
         <Polarity
@@ -62,7 +62,7 @@ class App extends Component {
             <Route
               exact
               path="/"
-              render={({}) => (
+              render={({ }) => (
                 <MuiThemeProvider>
                   <div className="centerize">
                     <Paper zDepth={1} className="content">
@@ -79,12 +79,30 @@ class App extends Component {
                       />
                       {polarityComponent}
                     </Paper>
+                    <div style={{marginTop: "15px", display: "flex", justifyContent: "space-between" }}>
+                      <Link
+                        style={{ textDecoration: "none", textAlign:"center", width: "25%", padding: "10px", border: 'gray 1px solid', borderRadius: '7px', color: 'white', backgroundColor: "#2674d5" }}
+                        to="/testHealth">
+                        Test Java
+                      </Link>
+                      <Link
+                        style={{ textDecoration: "none", textAlign: "center", width: "25%", padding: "10px", border: 'gray 1px solid', borderRadius: '7px', color: 'white', backgroundColor: "#2674d5" }}
+                        to="/testComms">
+                        Test Python
+                      </Link>
+                      <Link
+                        style={{ textDecoration: "none", textAlign: "center",width: "25%", padding: "10px", border: 'gray 1px solid', borderRadius: '7px', color: 'white', backgroundColor: "#2674d5" }}
+                        to="/weather">
+                        Weather App
+                      </Link>
+                    </div>
                   </div>
                 </MuiThemeProvider>
               )}
             />
             <Route exact path="/testHealth" component={TestJava} />
             <Route exact path="/testComms" component={TestPython} />
+            <Route exact path="/weather" component={Weather} />
             <Route component={NotFound} />
           </Switch>
         </Router>
