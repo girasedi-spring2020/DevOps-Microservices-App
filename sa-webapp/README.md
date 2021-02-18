@@ -1,29 +1,32 @@
 ## Sentiment Analysis - Java Web App
 
-RockStar Music App is divided into two parts:
-1. .NET Core WebApi as Backend and .NET Core MVC as Frontend
-2. .NET Core WebApi as Backend and React as frontend
+This is a Server Side MVC Application that acts as connection between React Frontend and Python WebApi
 
 ## Getting Started
-git clone 
+
+`git clone https://github.com/girasedi-spring2020/DevOps-Microservices-App.git`
 
 ## Prerequisites
+
 1. JDK Download: https://www.oracle.com/java/technologies/javase-downloads.html
 2. Download Maven: https://maven.apache.org/download.cgi
 3. Follow OS specific instructions at : https://maven.apache.org/install.html
-4. Install Visual Studio (IDE) - [https://visualstudio.microsoft.com/downloads/]
+4. For Windows detailed instruction for Maven setup are here: https://mkyong.com/maven/how-to-install-maven-in-windows/
+5. Install Visual Studio (IDE) - https://visualstudio.microsoft.com/downloads/
 
 ## Editor
+
 Visual Studio Code
 
 ## Stack
-- Java
 
-## How to run
-* Run mvn install 
-* cd into the target folder and run using "java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar"
-* Navigate to the port using localhost
+- Java spring Boot
 
-## Author
-Vidhi Nagda
+## Build and Run
 
+- Install git on your local
+- Clone the repository using `git clone https://github.com/girasedi-spring2020/DevOps-Microservices-App.git`
+- cd into **sa-webapp** folder
+- Run mvn install
+- cd into the target folder and run using "java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar"
+- Navigate to the port using localhost
