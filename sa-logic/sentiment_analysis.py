@@ -27,8 +27,11 @@ def analyse_sentiment_get():
 
 @app.route("/analyse/sentiment", methods=['POST'])
 def analyse_sentiment():
-    sentence = request.get_json()['sentence']
-    polarity = TextBlob(sentence).sentences[0].polarity
+    sentence = request.get_data()
+    sentence = sentence.decode("utf-8")
+    sentence = sentence.replace("<SentenceDto><sentence>", "")
+    sentence = sentence.replace("</sentence></SentenceDto>", "")
+    polarity = TextBlob(sentence).polarity
     return jsonify(
         sentence=sentence, polarity=polarity
     )

@@ -28,5 +28,5 @@ Visual Studio Code
 - Clone the repository using `git clone https://github.com/girasedi-spring2020/DevOps-Microservices-App.git`
 - cd into **sa-webapp** folder
 - Run mvn install
-- cd into the target folder and run using "java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar"
+- cd into the target folder and run using `java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar`
 - Navigate to the port using localhost
